@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Donut Masterclass</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,10 +19,30 @@
     />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <!-- header -->
+    <include src="./partials/header.html"></include>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <!-- menu -->
+    <include src="./partials/menu.html"></include>
+
+    <!-- about-us -->
+    <include src="./partials/about-us.html"></include>
+
+    <!-- program -->
+    <include src="./partials/program.html"></include>
+
+    <!-- reviews -->
+    <include src="./partials/reviews.html"></include>
+
+    <!-- registration -->
+    <include src="./partials/registration.html"></include>
+
+    <!-- contact -->
+    <include src="./partials/contact.html"></include>
+
+    <!-- footer -->
+    <include src="./partials/footer.html"></include>
+
     <script src="./index.js"></script>
   </body>
 </html>
