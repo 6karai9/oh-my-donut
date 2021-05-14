@@ -53,13 +53,16 @@ body {
   color: var(--title-color);
 }
 
-.button {
+.button-style {
   font-family: 'Caveat Brush', sans-serif;
   font-size: 18px;
   line-height: 3.6;
   letter-spacing: 0.05em;
+  width: 145px;
+  height: 40px;
   border-radius: 25px;
   background-color: var(--bg-button-color);
+  color: var(--white-color);
 }
 
 @media screen and (min-width: 1280px) {
@@ -68,8 +71,10 @@ body {
     line-height: 1.22;
   }
 
-  .button {
+  .button-style {
     font-size: 24px;
     line-height: 2.7;
+    width: 158px;
+    height: 45px;
   }
 }
