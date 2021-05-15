@@ -30,10 +30,6 @@
   border-bottom: 1px solid #ab816c;
 }
 
-.form-contact_button {
-  width: 158px;
-  height: 45px;
-  color: #fff;
-  border: none;
-  text-align: center;
+.form-contact_button:hover {
+  background-color: var(--mobile-menu-hover);
 }
