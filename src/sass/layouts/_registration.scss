@@ -1,11 +1,19 @@
+.registration--wrap {
+  position: relative;
+}
+
 .registration {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
   width: 100%;
   min-width: 290px;
   height: 510px;
+
+  padding-top: 50px;
 
   border-top-left-radius: 150px;
   border-top-right-radius: 150px;
@@ -32,6 +40,11 @@
   line-height: 2.71;
 }
 
+.text-style {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+}
 .button--style {
   align-self: center;
 
@@ -47,18 +60,16 @@
   }
 }
 
-.text-style {
-  font-weight: 500;
-  font-size: 18;
-  line-height: 1.22;
-}
+// .registration--position {
 
-.registration--position {
-  text-align: center;
-}
+// }
 
 .registration__head {
-  margin-bottom: 14px;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%);
+  // margin-bottom: 14px;
 }
 
 .registration__place {
