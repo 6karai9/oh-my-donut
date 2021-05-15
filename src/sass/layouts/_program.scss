@@ -3,7 +3,7 @@
   flex-wrap: nowrap;
 }
 .program__text {
-  width: 382px;
+  max-width: 382px;
 }
 .program__heading {
   font-family: 'Caveat Brush', sans-serif;
@@ -15,19 +15,22 @@
   font-size: 18px;
   margin-bottom: 21px;
 }
-.program__list {
+.program__text-list {
   list-style: none;
   margin-bottom: 21px;
 }
-.program__item:not(:last-child) {
+.program__text-item:not(:last-child) {
   padding-bottom: 15px;
 }
 .program__paragraph_2 {
   font-size: 18px;
 }
 
-.program__item::before {
+.program__text-item::before {
   content: '>';
   width: 100%;
   margin-right: 3px;
+}
+.title {
+  --title-color: #000000;
 }
