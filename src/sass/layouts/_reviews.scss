@@ -1,0 +1,61 @@
+.review__title{
+    font-size: 24px;
+    line-height: 65px;
+    font-weight: normal;
+
+    text-align: center;
+}
+
+.reviewer__photo{
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.reviewer__rate{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.reviewer__name{
+    font-size: 14px;
+    line-height: 20px;
+    font-style: italic;
+
+    text-align: center;
+}
+
+article{
+    overflow: hidden;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 35px;
+    margin-top: 10px;
+
+    @media screen and(min-width:320px) {
+        max-width: 290px;
+        max-height: 220px;
+    }
+    @media screen and(min-width:768px) {
+        max-width: 626px;
+        max-height: 120px;
+    }
+    @media screen and(min-width:1280px) {
+        max-width: 626px;
+        max-height: 132px;
+    }
+}
+
+.counter{
+    text-align: center;
+}
+
+.counter::before{
+    content: '--';
+}
+
+.counter::after{
+    content: '--';
+}
+
