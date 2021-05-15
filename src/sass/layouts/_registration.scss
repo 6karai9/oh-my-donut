@@ -1,19 +1,22 @@
-.registration--wrap {
-  position: relative;
+// .registration--wrap {
+//   position: relative;
+// }
+.container--registration {
+  padding: 0;
 }
-
 .registration {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
   text-align: center;
 
   width: 100%;
   min-width: 290px;
   height: 510px;
 
-  padding-top: 50px;
+  // padding-top: 50px;
 
   border-top-left-radius: 150px;
   border-top-right-radius: 150px;
@@ -21,6 +24,15 @@
   background: var(--form-bg-color);
 
   box-shadow: var(--registration-shadow);
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 634px;
+    max-height: 260px;
+
+    text-align: start;
+  }
 }
 
 /* скрываем вспомогательные заголовки и др. элементы */
@@ -60,16 +72,9 @@
   }
 }
 
-// .registration--position {
-
-// }
-
 .registration__head {
-  position: absolute;
-  left: 50%;
-  top: 15px;
-  transform: translate(-50%);
-  // margin-bottom: 14px;
+  margin-top: 15px;
+  margin-bottom: 14px;
 }
 
 .registration__place {
