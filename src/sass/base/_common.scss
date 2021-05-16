@@ -24,6 +24,11 @@ ul {
   padding-inline-start: 0;
 }
 
+a {
+  text-decoration: none;
+  display: block;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -35,6 +40,19 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  @media screen and (min-width: 1280px) {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+}
+
 .no-list {
   list-style: none;
 }
@@ -44,22 +62,22 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
+  // letter-spacing: 0.03em;
   color: var(--main-text-color);
 
-  @media screen and (min-width:320px) {
+  @media screen and (min-width: 320px) {
     background: url('./../images/background_images/top-mobile.svg') no-repeat,
       url('./../images/background_images/bottom-mobile.svg') no-repeat;
     background-position: top center, bottom center;
     background-size: 100%;
   }
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     background: url('./../images/background_images/top-tablet.svg') no-repeat,
       url('./../images/background_images/bottom-tablet.svg') no-repeat;
     background-position: top center, bottom center;
     background-size: 100%;
   }
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     background: url('./../images/background_images/top-desktop.svg') no-repeat,
       url('./../images/background_images/bottom-desktop.svg') no-repeat;
     background-position: top center, bottom center;
@@ -81,6 +99,7 @@ body {
   height: 40px;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
   background-color: var(--bg-button-color);
   color: var(--white-color);
 }
