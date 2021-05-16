@@ -1,40 +1,3 @@
-// .registration--wrap {
-//   position: relative;
-// }
-.container--registration {
-  padding: 0;
-}
-.registration {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  text-align: center;
-
-  width: 100%;
-  min-width: 290px;
-  height: 510px;
-
-  // padding-top: 50px;
-
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-
-  background: var(--form-bg-color);
-
-  box-shadow: var(--registration-shadow);
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 634px;
-    max-height: 260px;
-
-    text-align: start;
-  }
-}
-
 /* скрываем вспомогательные заголовки и др. элементы */
 .visually-hidden {
   position: absolute !important;
@@ -47,6 +10,7 @@
   overflow: hidden;
 }
 
+// коррекция стилей применительно к секции
 .title--registration {
   font-size: 24px;
   line-height: 2.71;
@@ -57,6 +21,7 @@
   font-size: 18px;
   line-height: 1.22;
 }
+
 .button--style {
   align-self: center;
 
@@ -66,49 +31,167 @@
 
   line-height: 0;
 
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+
+    transform: translate(0, -50%);
+  }
+
   @media screen and (min-width: 1280px) {
     width: 158px;
     height: 45px;
   }
 }
 
+// описание св-в секции
+.container--registration {
+  padding-left: 18px;
+  padding-right: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 67px;
+    padding-right: 67px;
+  }
+}
+
+.registration {
+  padding-top: 15px;
+
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    min-width: 290px;
+    height: 510px;
+
+    padding-left: 13px;
+    padding-right: 12px;
+
+    text-align: center;
+
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+
+    background: var(--form-bg-color);
+
+    box-shadow: var(--registration-shadow);
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
+
+  // @media screen and (min-width: 1200px) {
+  //   min-width: 1200px;
+  // }
+}
+
+.registration__main-section {
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 634px;
+    height: 260px;
+    padding-top: 8.5%;
+
+    border-radius: 150px;
+
+    background: var(--form-bg-color);
+
+    box-shadow: var(--registration-shadow);
+
+    &::before {
+      content: '';
+      display: block;
+
+      position: absolute;
+
+      width: 190px;
+      height: 1px;
+      bottom: 35px;
+      left: 179px;
+      transform: rotate(-100grad);
+      transform-origin: left;
+
+      background-color: var(--registration-input-color);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 822px;
+  }
+}
+
 .registration__head {
-  margin-top: 15px;
   margin-bottom: 14px;
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.registration__date-place-price {
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10%;
+    margin-left: 5%;
+  }
+}
+
+.registration__price,
+.registration__place {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
 }
 
 .registration__place {
   margin-bottom: 30px;
 }
 
-.registration__price {
-  margin-bottom: 20px;
-}
-
 .registration-form__appeal {
   width: 265px;
   padding: 0 20px;
   margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
 }
 
 .registration__form {
   display: flex;
   flex-direction: column;
-}
 
-.registration__form::before {
-  content: '';
-  display: block;
+  @media screen and (max-width: 767.98px) {
+    &::before {
+      content: '';
+      display: block;
 
-  width: 265px;
-  height: 1px;
+      width: 265px;
+      height: 1px;
 
-  background-color: var(--registration-input-color);
-  margin-bottom: 13px;
+      background-color: var(--registration-input-color);
+      margin-bottom: 13px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+  }
 }
 
 .registration-form__input-field {
-  height: 20px;
+  height: 21px;
+  padding: 0;
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -119,14 +202,105 @@
     color: #ff0000;
   }
 
-  &:nth-of-type(-n + 2) {
-    margin-bottom: 25px;
+  @media screen and (max-width: 767.98px) {
+    &:nth-of-type(-n + 2) {
+      margin-bottom: 25px;
+    }
+    &:last-of-type {
+      margin-bottom: 37px;
+    }
   }
-  &:last-of-type {
-    margin-bottom: 37px;
+
+  @media screen and (min-width: 768px) {
+    &:nth-of-type(-n + 2) {
+      margin-bottom: 15px;
+    }
   }
 
   &::placeholder {
     color: var(--registration-input-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 234px;
+  }
+}
+
+.registration__bg-cake {
+  position: absolute;
+  right: 488px;
+  bottom: 89px;
+
+  width: 200px;
+  height: 200px;
+
+  transform: rotate(-1grad);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    right: 555px;
+    bottom: 96px;
+
+    width: 196px;
+    height: 200px;
+
+    transform: rotate(-1grad);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(./../images/registration/desktop_donut4-2.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/registration/desktop_donut4-2@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(./../images/registration/tablet_donut4-2.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/registration/tablet_donut4-2@2x.png);
+    }
+  }
+}
+
+.registration__bg-gold {
+  position: absolute;
+  left: 504px;
+  top: 151px;
+
+  width: 191px;
+  height: 345px;
+
+  transform: rotate(390grad);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 1200px) {
+    left: 403px;
+    top: 134px;
+
+    width: 300px;
+    height: 544px;
+    transform: rotate(388grad);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(/images/registration/desktop_kisspng-party-confetti-birthday-idea.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/registration/desktop_kisspng-party-confetti-birthday-idea@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(/images/registration/tablet_kisspng-party-confetti-birthday-idea.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/registration/tablet_kisspng-party-confetti-birthday-idea@2x.png);
+    }
   }
 }
