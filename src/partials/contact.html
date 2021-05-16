@@ -1,17 +1,16 @@
-<section class="contact">
-    <div class="container">
-        <form class="form-contact">
-            <h2 class="contact__title title">Contact</h2>
-            <p class="contact__text">We will answer any question!</p>
-            <label>
-                <input class="form-contact__input" type="email" name="email" autocomplete="off"
-                    pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" placeholder="Email" required="">
-            </label>
-            <label>
-                <input class="form-contact__input" type="text" name="text"
-                    pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" placeholder="Type your question" required="">
-            </label>
-            <button class="form-contact__button button-style">Send</button>
+<!DOCTYPE html>
+<div class="container">
+    <section>
+        <h2 class="title">Contact</h2>
+        <p class="contact__text">We will answer any question!</p>
+        <form>
+            <div class="contact__field">
+                <input class="contact__input" type="email" id="contact-email" placeholder="Email" required>
+            </div>
+            <div class="contact__field">
+                <input class="contact__input" type="text" id="contact-question" placeholder="Type your question" required>
+            </div>
+            <button class="contact__button" type="submit">Send</button>
         </form>
-    </div>
-</section>
+    </section>
+</div>
