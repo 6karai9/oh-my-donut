@@ -17,3 +17,26 @@ import './sass/main.scss';
     closeMenuBtnRef.setAttribute("aria-expanded", true);
   });
 })();
+
+// cкрипт секции About us, для кнопки Read more/Read less
+let checkIt = true;
+
+let btn = document.getElementById('btn');
+btn.addEventListener('click', readMore);
+
+function readMore() {
+  let brake = document.getElementById('brake');
+  let more = document.getElementById('more');
+
+  if (checkIt) {
+    more.style.display = 'inline';
+    brake.style.display = 'none';
+    btn.innerHTML = 'less';
+    checkIt = false;
+  } else {
+    brake.style.display = 'inline';
+    more.style.display = 'none';
+    btn.innerHTML = 'Read more';
+    checkIt = true;
+  }
+}
