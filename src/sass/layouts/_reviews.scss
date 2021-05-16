@@ -1,3 +1,4 @@
+//Block reviews style
 .review__title{
     font-weight: normal;
 
@@ -35,6 +36,7 @@
 }
 
 article{
+    display: none;
     overflow: hidden;
     text-align: center;
     margin-right: auto;
@@ -56,6 +58,8 @@ article{
     }
 }
 
+//SLider block style
+
 .counter{
     text-align: center;
 }
@@ -70,38 +74,54 @@ article{
 
 .slider{
     position: relative;
-    @media screen and(min-width:320px) {
-        .John,.Elizabeth{
-            display: none;
-        }
-    }
-    @media screen and(min-width:768px) {
-        display: flex;
-        justify-content: center;
-        .John{
-            display: block;
-            position: absolute;
-            left: 75px;
-        }
-        .Elizabeth{
-            display: block;
-            position: absolute;
-            right: 75px;
-        }
-        .John__text,.Elizabeth__text{
-            display: none;
-        }
-    }
-    @media screen and(min-width:1280px) {
-        .John{
-            left: 327px;
-        }
-        .Elizabeth{
-            right: 327px;
-        }
-    }
+    max-width: 626px;
 }
 
-.Will{
-    margin-top: 24px;
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+}
+
+.slick-prev{
+    left: -6px;
+    margin: -15px 0 0 0 ;
+    background: url('./../images/background_images/button-background.svg') 0 0 / 100% no-repeat ;
+    height: 30px;
+    width: 30px;
+    border: none;
+    transform: rotate(180deg);
+}
+.slick-next{
+    right: -6px;
+    margin: -15px 0 0 0 ;
+    background: url('./../images/background_images/button-background.svg') 0 0 / 100% no-repeat ;
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+.slick-list, .slick-slider{
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.slick-slide{
+    display: inline-block;
+}
+
+.slick-current .reviewer__photo{
+    @media screen and(min-width:320px) {
+        width: 110px;
+    }
+
+    @media screen and(min-width:768px) {
+        width: 186px;
+        margin-top: 18px;
+    }
+    @media screen and(min-width:1280px) {
+        width: 234px;
+    }
 }
