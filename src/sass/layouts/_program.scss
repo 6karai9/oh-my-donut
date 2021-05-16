@@ -1,9 +1,10 @@
-.program {
+.program__flex-box {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
 }
 .program__text {
   max-width: 382px;
+  margin-right: 40px;
 }
 .program__heading {
   font-family: 'Caveat Brush', sans-serif;
@@ -25,12 +26,117 @@
 .program__paragraph_2 {
   font-size: 18px;
 }
-
 .program__text-item::before {
   content: '>';
   width: 100%;
   margin-right: 3px;
 }
-.title {
-  --title-color: #000000;
+.read_more {
+  text-decoration: none;
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 18px;
+  line-height: 3.6;
+  color: var(--link-color);
+  display: none;
+  background-color: inherit;
+  border: none;
+}
+
+.program__title {
+  color: #000000;
+  margin-bottom: 16px;
+}
+.program__label {
+  --main-text-color: #000000;
+  margin-bottom: 17px;
+}
+.program__images {
+  display: flex;
+}
+.program__images-item {
+  position: relative;
+  margin-right: 32px;
+}
+.program__donut {
+  position: absolute;
+  top: -25%;
+  left: 41px;
+  right: 42px;
+}
+.program__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 63px;
+  padding-bottom: 12px;
+  background-color: blue;
+  border-radius: 50%;
+  width: 142px;
+  box-shadow: rgba(171, 129, 108, 0.25);
+}
+.program__images-item2--pos {
+  margin-top: 56px;
+}
+.program__images-item3--pos,
+.program__images-item4--pos {
+  margin-top: 61px;
+}
+@media screen and (min-width: 1279.98px) {
+  .program__circle {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .program__heading {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+  .read_more {
+    display: block;
+  }
+  .program__text-list {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .program__paragraph_1 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .program__paragraph_2 {
+    font-size: 16px;
+    line-height: 1.25;
+    display: none;
+  }
+  .program__title {
+    font-size: 18px;
+    margin-bottom: 12.62px;
+  }
+  .program__label {
+    font-size: 14px;
+    margin-bottom: 13.41px;
+  }
+  .program__donut {
+    left: 32.34px;
+    right: 33.13px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .program__circle {
+    padding-top: 49.7px;
+    padding-bottom: 8.82px;
+  }
+  .program__donut {
+    width: 76.52px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 768.98px) {
+  .program__flex-box {
+    display: block;
+  }
+  .program__images {
+    margin-top: 33.92px;
+  }
 }
