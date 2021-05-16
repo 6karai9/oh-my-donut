@@ -80,6 +80,10 @@
   @media screen and (min-width: 768px) {
     position: relative;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   min-width: 1200px;
+  // }
 }
 
 .registration__main-section {
@@ -116,6 +120,10 @@
 
       background-color: var(--registration-input-color);
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 822px;
   }
 }
 
@@ -231,11 +239,30 @@
   background-size: 100%;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: 768px) {
-    background-image: url(/images/registration/tablet_donut4-2.png);
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    right: 555px;
+    bottom: 96px;
+
+    width: 196px;
+    height: 200px;
+
+    transform: rotate(-1grad);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(./../images/registration/desktop_donut4-2.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/registration/tablet_donut4-2@2x.png);
+      background-image: url(./../images/registration/desktop_donut4-2@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(./../images/registration/tablet_donut4-2.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/registration/tablet_donut4-2@2x.png);
     }
   }
 }
@@ -252,6 +279,23 @@
   background-size: 100%;
   background-repeat: no-repeat;
 
+  @media screen and (min-width: 1200px) {
+    left: 403px;
+    top: 134px;
+
+    width: 300px;
+    height: 544px;
+    transform: rotate(388grad);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(/images/registration/desktop_kisspng-party-confetti-birthday-idea.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/registration/desktop_kisspng-party-confetti-birthday-idea@2x.png);
+    }
+  }
+
   @media screen and (min-width: 768px) {
     background-image: url(/images/registration/tablet_kisspng-party-confetti-birthday-idea.png);
 
@@ -259,5 +303,4 @@
       background-image: url(/images/registration/tablet_kisspng-party-confetti-birthday-idea@2x.png);
     }
   }
-  // z-index: 2;
 }
