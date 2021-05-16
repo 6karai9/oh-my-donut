@@ -1,0 +1,375 @@
+@mixin centeredFlex($al-It: center, $just-Cont: center, $fl-wrap: nowrap, $fl-dir: row) {
+  display: flex;
+  align-items: $al-It;
+  justify-content: $just-Cont;
+  flex-wrap: $fl-wrap;
+  flex-direction: $fl-dir;
+}
+
+%listZero {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+%lincZero {
+  text-decoration: none;
+  display: block;
+}
+
+.header-container {
+  @include centeredFlex(center, center, nowrap, column);
+  position: relative;
+  padding-top: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px;
+  //outline: 1px solid black;
+
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/header/donuts-s-1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/header/donuts-s-2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/header/donuts-s-2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 37.5vw auto;
+    background-position: left top;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include centeredFlex(flex-start, flex-start, nowrap, column);
+    width: 768px;
+    padding-top: 27px;
+    padding-left: 68px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding-top: 31px;
+    padding-left: 189px;
+  }
+}
+
+.logo {
+  @extend %lincZero;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.logo__icon {
+  width: 96px;
+  height: 43px;
+
+  &--menu {
+    width: 190px;
+    height: 85px;
+
+    @media screen and (min-width: 1280px) {
+      width: 158px;
+      height: 71px;
+    }
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    top: 23px;
+    right: 63px;
+  }
+
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:focus,
+  &:hover {
+    background-color: var(--menu-active-color);
+    box-shadow: 0 0 3px 3px var(--menu-active-color);
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:focus,
+  &:hover {
+    background-color: var(--menu-active-color);
+    box-shadow: 0 0 3px 3px var(--menu-active-color);
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.site-menu,
+.site-navi,
+.menu--logo {
+  @extend %lincZero;
+  @include centeredFlex(center, center, wrap, column);
+}
+
+.site-navi {
+  @media screen and (max-width: 1279px) {
+    position: fixed;
+    z-index: 99;
+    padding-top: 25px;
+    background-color: var(--menu-bg-color);
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    opacity: 0;
+    backdrop-filter: blur(4px);
+    transition: visibility var(--animation), transform var(--animation), opacity var(--animation);
+
+    &.menu-is-open {
+      transform: scale(1);
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include centeredFlex();
+  }
+}
+
+.site-menu {
+  @extend %listZero;
+  @media screen and (max-width: 1279px) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include centeredFlex();
+    margin-left: 28px;
+  }
+}
+
+.site-menu__item + .site-menu__item {
+  margin-top: 35px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 0px;
+  }
+}
+
+.site-menu__link {
+  @extend %lincZero;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
+  text-align: center;
+  color: var(--main-text-color);
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--menu-active-color);
+    box-shadow: 0 0 3px 3px var(--menu-active-color);
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.site-title {
+  margin-top: 33px;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 1.26;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 57px;
+    font-size: 64px;
+    line-height: 1.02;
+  }
+}
+
+.site-subtitle {
+  margin-top: 3px;
+  margin-bottom: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.22;
+  text-align: center;
+  color: var(--title-color);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.22;
+  }
+}
+
+.header--button {
+  @extend %lincZero;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    border-radius: 22px;
+    line-height: 1.875;
+  }
+}
+
+.soc-list__icon {
+  width: 15px;
+  height: 15px;
+  fill: var(--icons-color);
+
+  @media screen and (min-width: 1280px) {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.soc-list__link {
+  @extend %lincZero;
+  @include centeredFlex();
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:focus,
+  &:hover {
+    background-color: var(--menu-active-color);
+    box-shadow: 0 0 3px 3px var(--menu-active-color);
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.soc-list {
+  @extend %listZero;
+  @include centeredFlex();
+  margin-top: 45px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 28px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 62px;
+  }
+
+  &__item--inst {
+    margin-left: 7px;
+    @media screen and (min-width: 1280px) {
+      margin-left: 8px;
+    }
+  }
+
+  &__item--face {
+    margin-left: 2px;
+
+    @media screen and (min-width: 1280px) {
+      margin-left: 2px;
+    }
+  }
+}
+
+.donuts-m {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 254px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+  }
+}
+
+.spoon,
+.donuts-l {
+  position: absolute;
+  z-index: -1;
+  display: none;
+  top: 0;
+  right: 0;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.donuts-l {
+  top: 0;
+  right: 0;
+}
+
+.spoon {
+  top: 166px;
+  left: 0;
+}
