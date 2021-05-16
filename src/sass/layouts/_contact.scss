@@ -23,8 +23,7 @@
   text-align: center;
 }
 
-.form-contact_input1,
-.form-contact_input2 {
+.form-contact__input {
   max-width: 430px;
   margin-bottom: 25px;
   border: none;
@@ -41,12 +40,11 @@
   }
 }
 
-.form-contact_input1::placeholder,
-.form-contact_input2::placeholder {
+.form-contact__input::placeholder {
   color: var(--registration-input-color);
 }
 
-.form-contact_button {
+.form-contact__button {
   color: #fff;
   border: none;
   text-align: center;
