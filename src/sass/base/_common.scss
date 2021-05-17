@@ -41,7 +41,6 @@ img {
 }
 
 .visually-hidden {
-  @media screen and (min-width: 1280px) {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
@@ -50,7 +49,6 @@ img {
     height: 1px !important;
     width: 1px !important;
     overflow: hidden;
-  }
 }
 
 .no-list {
