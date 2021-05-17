@@ -14,6 +14,11 @@
 .title--registration {
   font-size: 24px;
   line-height: 2.71;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+    line-height: 1.81;
+  }
 }
 
 .text-style {
@@ -42,6 +47,9 @@
 
   @media screen and (min-width: 1280px) {
     right: 98px;
+    font-size: 24px;
+
+    background-color: var(--mobile-menu-hover);
   }
 }
 
@@ -291,23 +299,23 @@
 .registration__bg-gold {
   @media screen and (min-width: 768px) {
     position: absolute;
-    left: 498px;
+    left: 492px;
     top: 164px;
 
     width: 191px;
     height: 345px;
 
-    transform: rotate(390grad);
+    transform: rotate(397grad);
     background-size: 100%;
   }
 
   @media screen and (min-width: 1280px) {
-    left: 650px;
-    top: 76px;
+    left: 647px;
+    top: 71px;
 
     width: 540px;
     height: 604px;
-    transform: rotate(390grad);
+    transform: rotate(397grad);
   }
 
   @media screen and (min-width: 768px) {
