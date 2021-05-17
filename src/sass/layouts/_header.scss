@@ -17,6 +17,16 @@
   display: block;
 }
 
+%btnZero {
+  position: absolute;
+  @include centeredFlex();
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .header-container {
   @include centeredFlex(center, center, nowrap, column);
   position: relative;
@@ -78,14 +88,11 @@
 }
 
 .menu-button {
-  position: absolute;
+  @extend %btnZero;
   top: 7px;
   right: 15px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
+  width: 34px;
+  height: 34px;
 
   @media screen and (min-width: 768px) {
     top: 23px;
@@ -111,16 +118,11 @@
 }
 
 .close-menu {
-  position: absolute;
+  @extend %btnZero;
   top: 10px;
   right: 10px;
   width: 30px;
   height: 30px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
   transition: background-color var(--animation), box-shadow var(--animation);
 
   &:focus,
@@ -160,12 +162,20 @@
     visibility: hidden;
     transform: scale(0.8);
     opacity: 0;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     transition: visibility var(--animation), transform var(--animation), opacity var(--animation);
+
+    @media screen and (max-height: 310px) {
+      overflow: scroll;
+    }
+
+    @media screen and (max-height: 410px) {
+      padding-top: 15px;
+    }
 
     &.menu-is-open {
       transform: scale(1);
-      opacity: 100%;
+      opacity: 1;
       visibility: visible;
     }
   }
@@ -185,19 +195,27 @@
     @include centeredFlex();
     margin-left: 28px;
   }
+
+  @media screen and (max-height: 410px) {
+    margin-top: 25px;
+  }
 }
 
 .site-menu__item + .site-menu__item {
-  margin-top: 35px;
+  margin-top: 41px;
 
   @media screen and (min-width: 1280px) {
     margin-top: 0px;
+  }
+
+  @media screen and (max-height: 410px) {
+    margin-top: 16px;
   }
 }
 
 .site-menu__link {
   @extend %lincZero;
-  padding: 5px 15px;
+  padding: 2px 15px;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -215,7 +233,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-radius: 16px;
     font-size: 18px;
     font-weight: 400;
@@ -266,17 +284,29 @@
   }
 }
 
-.header--button {
+.header-button {
   @extend %lincZero;
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  width: 145px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
   border-radius: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 2.2;
   text-align: center;
+  background-color: var(--bg-button-color);
+  color: var(--white-color);
 
   @media screen and (min-width: 1280px) {
-    border-radius: 22px;
+    font-size: 24px;
+    width: 158px;
+    height: 45px;
     line-height: 1.875;
+    border-radius: 22px;
   }
 }
 
@@ -342,6 +372,7 @@
 
 .donuts-m {
   position: absolute;
+  z-index: -1;
   display: none;
   top: 0;
   left: 254px;

@@ -3,6 +3,7 @@ import './sass/main.scss';
 (() => {
   const openMenuBtnRef = document.querySelector("[data-open-menu-button]");
   const closeMenuBtnRef = document.querySelector("[data-close-menu-button]");
+  const menuLinkRef = document.querySelector("[data-menu-link]"); 
   const mobileMenuRef = document.querySelector("[data-menu]");
 
   openMenuBtnRef.addEventListener("click", () => {
@@ -12,6 +13,12 @@ import './sass/main.scss';
   });
 
   closeMenuBtnRef.addEventListener("click", () => {
+    mobileMenuRef.classList.remove("menu-is-open");
+    mobileMenuRef.setAttribute("aria-expanded", false);
+    closeMenuBtnRef.setAttribute("aria-expanded", true);
+  });
+
+  menuLinkRef.addEventListener("click", () => {
     mobileMenuRef.classList.remove("menu-is-open");
     mobileMenuRef.setAttribute("aria-expanded", false);
     closeMenuBtnRef.setAttribute("aria-expanded", true);
