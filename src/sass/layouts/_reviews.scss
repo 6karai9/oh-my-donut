@@ -1,4 +1,8 @@
 //Block reviews style
+.Reviews{
+    padding-top: 68px;
+}
+
 .review__title{
     font-weight: normal;
 
@@ -35,82 +39,72 @@
     text-align: center;
 }
 
-article{
-    display: none;
-    overflow: hidden;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 35px;
-    margin-top: 10px;
-
-    @media screen and(min-width:320px) {
-        max-width: 290px;
-        max-height: 220px;
-    }
-    @media screen and(min-width:768px) {
-        max-width: 626px;
-        max-height: 120px;
-    }
-    @media screen and(min-width:1280px) {
-        max-width: 626px;
-        max-height: 132px;
-    }
-}
-
 //SLider block style
 
-.counter{
-    text-align: center;
-}
-
-.counter::before{
-    content: '--';
-}
-
-.counter::after{
-    content: '--';
-}
-
-.slider{
+.slider__counter {
     position: relative;
-    max-width: 626px;
+    z-index: 100;
+    color: var(--bg-button-color);
+    pointer-events: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 1px;
+      background-color: var(--bg-button-color);
+      top: 50%;
+      margin-left: -45px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 1px;
+      background-color: var(--bg-button-color);
+      top: 50%;
+      margin-left: 10px;
+    }
+
 }
+
 
 .slick-arrow{
     position: absolute;
-    top: 50%;
+    top: 15%;
     z-index: 10;
     font-size: 0;
+
+    &:hover, :focus{
+        cursor: pointer;
+        transform: scale(1.25);
+    }
 }
 
 .slick-prev{
     left: -6px;
     margin: -15px 0 0 0 ;
-    background: url('./../images/background_images/button-background.svg') 0 0 / 100% no-repeat ;
+    background: url('./../images/background_images/slick-prev.svg') 0 0 / 100% no-repeat ;
     height: 30px;
     width: 30px;
     border: none;
-    transform: rotate(180deg);
+    
 }
 .slick-next{
     right: -6px;
     margin: -15px 0 0 0 ;
-    background: url('./../images/background_images/button-background.svg') 0 0 / 100% no-repeat ;
+    background: url('./../images/background_images/slick-next.svg') 0 0 / 100% no-repeat ;
     height: 30px;
     width: 30px;
     border: none;
 }
 
-.slick-list, .slick-slider{
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-.slick-slide{
-    display: inline-block;
-}
 
 .slick-current .reviewer__photo{
     @media screen and(min-width:320px) {
@@ -125,3 +119,56 @@ article{
         width: 234px;
     }
 }
+
+.slick-cloned{
+    display: none;
+}
+
+.review{
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    
+    @media screen and (min-width:320px) {
+        width: 290px;
+        height: 220px;
+        transform: translateX(-3.5%);
+    }
+    @media screen and (min-width:768px) {
+        width: 600px;
+        height: 120px;
+        transform: translateX(-34%);
+    }
+    @media screen and (min-width:1280px) {
+        height: 132px;
+        width: 626px;
+    }
+}
+
+.slider{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+    @media screen and(min-width:320px) {
+        max-width: 290px;
+    }
+    
+    @media screen and(min-width:768px) {
+        max-width: 626px;
+        height: 450px;
+    }
+}
+
+.slick-current .review{
+    display: block;
+}
+
+.photo_cover{
+    position: relative;
+}
+
+
+
+
+
