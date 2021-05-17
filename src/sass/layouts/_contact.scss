@@ -1,12 +1,16 @@
 .contact__title {
   font-size: 24px;
-  line-height: 2.71;
   text-align: center;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+  }
 }
 
 .contact__text {
-  line-height: 4.06;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .contact__field {
@@ -41,10 +45,9 @@
   color: var(--registration-input-color);
 }
 
-.contact__button,
-.button-style {
+.contact__button {
   display: block;
-  margin: 10px auto 10px auto;
+  margin: 20px auto auto;
   text-align: center;
 }
 
