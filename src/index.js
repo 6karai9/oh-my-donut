@@ -40,3 +40,22 @@ function readMore() {
     checkIt = true;
   }
 }
+// cкрипт секции Program, для кнопки Read more/Read less
+let programcheckIt = true;
+let programbtn = document.getElementById('program__btn');
+programbtn.addEventListener('click', readMore);
+function readMore() {
+  let program__brake = document.getElementById('program__brake');
+  let program__more = document.getElementById('program__more');
+  if (programcheckIt) {
+    program__more.style.display = 'inline';
+    program__brake.style.display = 'none';
+    programbtn.innerHTML = 'less';
+    programcheckIt = false;
+  } else {
+    program__brake.style.display = 'inline';
+    program__more.style.display = 'none';
+    programbtn.innerHTML = 'Read more';
+    programcheckIt = true;
+  }
+}
