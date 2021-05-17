@@ -12,7 +12,7 @@
         font-size: 24px;
         line-height: 65px;
     }
-    @media screen and(min-width:768px) {
+    @media screen and(min-width:1280px) {
         font-size: 36px;
         line-height: 65px;
     }
@@ -32,11 +32,19 @@
 }
 
 .reviewer__name{
-    font-size: 14px;
-    line-height: 20px;
+    
     font-style: italic;
 
     text-align: center;
+
+    @media screen and(min-width:320px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @media screen and(min-width:1280px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 //SLider block style
@@ -133,6 +141,8 @@
         width: 290px;
         height: 220px;
         transform: translateX(-3.5%);
+        font-size: 16px;
+        line-height: 20px;
     }
     @media screen and (min-width:768px) {
         width: 600px;
