@@ -1,10 +1,7 @@
 .title {
-  font-family: Caveat Brush, sans-serif;
   font-size: 24px;
   line-height: 2.71;
   text-align: center;
-  font-weight: inherit;
-  color: var(--title-color);
 }
 
 .contact__text {
@@ -44,19 +41,11 @@
   color: var(--registration-input-color);
 }
 
-.contact__button {
+.contact__button,
+.button-style {
   display: block;
   margin: 10px auto 10px auto;
-  width: 145px;
-  height: 40px;
-  background-color: var(--link-color);
-  border-radius: 25px;
-  border: none;
-  color: var(--white-color);
-  font-family: Caveat Brush, sans-serif;
-  font-size: 18px;
   text-align: center;
-  cursor: pointer;
 }
 
 .contact__button:hover,
