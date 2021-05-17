@@ -48,7 +48,8 @@
   @media screen and (min-width: 1280px) {
     right: 98px;
     font-size: 24px;
-
+  }
+  &:hover {
     background-color: var(--mobile-menu-hover);
   }
 }
