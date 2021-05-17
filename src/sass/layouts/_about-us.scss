@@ -16,6 +16,10 @@
   }
 }
 
+#state {
+  display: none;
+}
+
 #more {
   display: none;
 
@@ -49,7 +53,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 0;
 
   @media screen and (min-width: 1280px) {
