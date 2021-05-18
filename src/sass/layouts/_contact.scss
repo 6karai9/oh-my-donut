@@ -69,4 +69,5 @@
 .contact__button:hover,
 .contact__button:focus {
   background-color: var(--mobile-menu-hover);
+  transition: var(--animation);
 }
