@@ -144,7 +144,7 @@
   @media screen and (max-width: 1279px) {
     position: fixed;
     z-index: 99;
-    @include centeredFlex(center, flex-start, wrap, column);
+    @include centeredFlex(center, flex-start, nowrap, column);
     padding-top: 25px;
     background-color: var(--menu-bg-color);
     width: 100%;
@@ -374,12 +374,20 @@
 }
 
 .donuts-l {
-  top: 0px;
+  top: -171px;
   right: 0px;
+  width: 720px;
+  height: 831px;
 
   @media screen and (min-width: 1280px) {
     display: block;
   }
+}
+
+.donuts-l > img {
+  height: 831px;
+  object-fit: none;
+  object-position: left top;
 }
 
 .spoon {
