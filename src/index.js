@@ -50,7 +50,7 @@ function readMore() {
 (() => {
   const openMenuBtnRef = document.querySelector('[data-open-menu-button]');
   const closeMenuBtnRef = document.querySelector('[data-close-menu-button]');
-  const menuLinkRef = document.querySelector('[data-menu-link]');
+  const menuLinkRef = Array.from(document.querySelectorAll('[data-menu-link]'));
   const mobileMenuRef = document.querySelector('[data-menu]');
 
   openMenuBtnRef.addEventListener('click', () => {
@@ -65,9 +65,10 @@ function readMore() {
     closeMenuBtnRef.setAttribute('aria-expanded', true);
   });
 
-  menuLinkRef.addEventListener('click', () => {
-    mobileMenuRef.classList.remove('menu-is-open');
-    mobileMenuRef.setAttribute('aria-expanded', false);
-    closeMenuBtnRef.setAttribute('aria-expanded', true);
-  });
+  menuLinkRef.forEach((linkRef) => {
+      linkRef.addEventListener('click', () => {
+      mobileMenuRef.classList.remove('menu-is-open');
+      mobileMenuRef.setAttribute('aria-expanded', false);
+    });
+  })
 })();
