@@ -54,6 +54,10 @@
     overflow: hidden;
   }
 }
+.program__button:focus {
+  color: var(--focus-color);
+  transition: color var(--animation);
+}
 
 .program__title {
   color: #000000;
@@ -165,6 +169,10 @@
   .program__text {
     margin-right: auto;
     margin-left: auto;
+    max-width: 290px;
+  }
+  .program__heading {
+    text-align: center;
   }
   .program__images-item {
     margin-right: 6px;
@@ -191,4 +199,29 @@
   .program__images-item2--pos {
     margin-top: 25px;
   }
+}
+/* Анимация пончиков */
+.program__donut1 {
+  transition: transform 0.8s ease-in-out;
+}
+.program__images-item:hover .program__donut1 {
+  transform: rotate(360deg);
+}
+.program__donut2 {
+  transition: transform 0.8s ease-in-out;
+}
+.program__images-item:hover .program__donut2 {
+  transform: rotate(360deg);
+}
+.program__donut3 {
+  transition: transform 0.8s ease-in-out;
+}
+.program__images-item:hover .program__donut3 {
+  transform: rotate(360deg);
+}
+.program__donut4 {
+  transition: transform 0.8s ease-in-out;
+}
+.program__images-item:hover .program__donut4 {
+  transform: rotate(360deg);
 }
