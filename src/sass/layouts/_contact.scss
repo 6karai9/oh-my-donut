@@ -1,3 +1,7 @@
+.contact {
+  padding-top: 60px;
+}
+
 .contact__title {
   font-size: 24px;
   text-align: center;
@@ -37,7 +41,7 @@
   width: inherit;
   height: 22px;
   border: none;
-  border-bottom: 1px solid var(--review-star-color);
+  border-bottom: 1px solid var(--link-color);
   background-color: transparent;
 }
 
