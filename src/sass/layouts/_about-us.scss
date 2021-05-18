@@ -70,6 +70,11 @@
   }
 }
 
+.about-btn:focus {
+  color: var(--focus-color);
+  transition: color var(--animation);
+}
+
 .about-wrapper {
   margin-top: 5px;
 
