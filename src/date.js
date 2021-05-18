@@ -10,7 +10,7 @@
 
  function time(){
     let d = new Date();
-    let hour = d.getHours();
+    let hour = d.getHours()-7;
     let day = d.getDate();
     let minutes = zeroFirst(d.getMinutes());
     let month=new Array("January","February","March","April","May","June",
