@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+.site-header {
+  position: relative;
+}
+
 .header-container {
   @include centeredFlex(center, center, nowrap, column);
   position: relative;
@@ -36,7 +40,6 @@
   margin-left: auto;
   margin-right: auto;
   min-width: 320px;
-  //outline: 1px solid black;
 
   @media screen and (max-width: 767px) {
     background-image: url(../images/header/donuts-s-1x.png);
@@ -47,8 +50,8 @@
       background-image: url(../images/header/donuts-s-2x.png);
     }
     background-repeat: no-repeat;
-    background-size: 37.5vw auto;
-    background-position: left top;
+    background-size: 41.3vw auto;
+    background-position: left -3.75vw top -15.9vw;
   }
 
   @media screen and (min-width: 768px) {
@@ -87,8 +90,19 @@
   }
 }
 
+.close-menu,
 .menu-button {
   @extend %btnZero;
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:focus,
+  &:hover {
+    background-color: var(--menu-active-color);
+    box-shadow: 0 0 3px 3px var(--menu-active-color);
+  }
+}
+
+.menu-button {
   top: 7px;
   right: 15px;
   width: 34px;
@@ -97,14 +111,6 @@
   @media screen and (min-width: 768px) {
     top: 23px;
     right: 63px;
-  }
-
-  transition: background-color var(--animation), box-shadow var(--animation);
-
-  &:focus,
-  &:hover {
-    background-color: var(--menu-active-color);
-    box-shadow: 0 0 3px 3px var(--menu-active-color);
   }
 
   &__icon {
@@ -118,18 +124,10 @@
 }
 
 .close-menu {
-  @extend %btnZero;
   top: 10px;
   right: 10px;
   width: 30px;
   height: 30px;
-  transition: background-color var(--animation), box-shadow var(--animation);
-
-  &:focus,
-  &:hover {
-    background-color: var(--menu-active-color);
-    box-shadow: 0 0 3px 3px var(--menu-active-color);
-  }
 
   &__icon {
     width: 18px;
@@ -241,6 +239,7 @@
 }
 
 .site-title {
+  font-family: 'Caveat Brush', sans-serif;
   margin-top: 33px;
   font-style: normal;
   font-size: 30px;
@@ -311,33 +310,38 @@
 }
 
 .soc-list__icon {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   fill: var(--icons-color);
+  transition: fill var(--animation);
 
   @media screen and (min-width: 1280px) {
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
   }
 }
 
 .soc-list__link {
   @extend %lincZero;
   @include centeredFlex();
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  transition: background-color var(--animation), box-shadow var(--animation);
-
+  border: 1px solid var(--title-color);
+  transition: background-color var(--animation);
   &:focus,
   &:hover {
-    background-color: var(--menu-active-color);
-    box-shadow: 0 0 3px 3px var(--menu-active-color);
+    background-color: var(--bg-button-color);
+  }
+
+  &:focus .soc-list__icon,
+  &:hover .soc-list__icon {
+    fill: var(--white-color);
   }
 
   @media screen and (min-width: 1280px) {
-    width: 25px;
-    height: 25px;
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -354,27 +358,25 @@
     margin-top: 62px;
   }
 
-  &__item--inst {
-    margin-left: 7px;
+  &__item + &__item {
+    margin-left: 5px;
+
     @media screen and (min-width: 1280px) {
       margin-left: 8px;
     }
   }
-
-  &__item--face {
-    margin-left: 2px;
-
-    @media screen and (min-width: 1280px) {
-      margin-left: 2px;
-    }
-  }
 }
 
-.donuts-m {
+.spoon,
+.donuts-m,
+.donuts-l {
   position: absolute;
   z-index: -1;
   display: none;
-  top: 0;
+}
+
+.donuts-m {
+  top: -35px;
   left: 254px;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -382,25 +384,20 @@
   }
 }
 
-.spoon,
 .donuts-l {
-  position: absolute;
-  z-index: -1;
-  display: none;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
 
   @media screen and (min-width: 1280px) {
     display: block;
   }
 }
 
-.donuts-l {
-  top: 0;
-  right: 0;
-}
-
 .spoon {
   top: 166px;
-  left: 0;
+  left: -122px;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
 }
