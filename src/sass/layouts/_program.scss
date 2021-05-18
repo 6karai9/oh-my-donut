@@ -1,16 +1,15 @@
 .program {
+  @media screen and (max-width: 767.98px) {
+    padding-top: 30px;
+  }
 
-@media screen and (max-width: 767.98px) {
-  padding-top: 30px;
-}
+  @media screen and (min-width: 768px) {
+    padding-top: 25px;
+  }
 
-@media screen and (min-width: 768px) {
-  padding-top: 25px;
-}
-
-@media screen and (min-width: 1280px) {
-  padding-top: 20px;
-}
+  @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+  }
 }
 
 .program__flex-box {
@@ -176,7 +175,6 @@
     margin-right: auto;
   }
   .program__images {
-    margin-top: 33.92px;
     justify-content: center;
   }
 }
@@ -217,25 +215,25 @@
 }
 /* Анимация пончиков */
 .program__donut1 {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 .program__images-item:hover .program__donut1 {
   transform: rotate(360deg);
 }
 .program__donut2 {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 .program__images-item:hover .program__donut2 {
   transform: rotate(360deg);
 }
 .program__donut3 {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 .program__images-item:hover .program__donut3 {
   transform: rotate(360deg);
 }
 .program__donut4 {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 .program__images-item:hover .program__donut4 {
   transform: rotate(360deg);
