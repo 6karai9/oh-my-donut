@@ -1,7 +1,18 @@
 //Block reviews style
-.Reviews{
-    padding-top: 68px;
-}
+.Reviews {
+
+    @media screen and (max-width: 767.98px) {
+      padding-top: 40px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      padding-top: 25px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+      padding-top: 65px;
+    }
+    }
 
 .review__title{
     font-weight: normal;

@@ -1,11 +1,24 @@
 // коррекция стилей применительно к секции
+.Registration {
+
+  @media screen and (max-width: 767.98px) {
+    padding-top: 25px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    padding-top: 10px;
+  }
+  
+  @media screen and (min-width: 1280px) {
+    padding-top: 60px;
+  }
+  }
+
 .title--registration {
   font-size: 24px;
-  line-height: 2.71;
 
   @media screen and (min-width: 1280px) {
     font-size: 36px;
-    line-height: 1.81;
   }
 }
 
@@ -139,6 +152,7 @@
 
   @media screen and (min-width: 768px) {
     text-align: center;
+    margin-bottom: 25px;
   }
 }
 
