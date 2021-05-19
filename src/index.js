@@ -10,7 +10,7 @@ function showMore() {
   if (programcheckIt) {
     program__more.style.display = 'inline';
     program__brake.style.display = 'none';
-    programbtn.innerHTML = 'less';
+    programbtn.innerHTML = 'Less';
     programcheckIt = false;
   } else {
     program__brake.style.display = 'inline';
@@ -35,7 +35,7 @@ function readMore() {
     more.style.display = 'inline';
     state.style.display = 'block';
     brake.style.display = 'none';
-    btn.innerHTML = 'less';
+    btn.innerHTML = 'Less';
     checkIt = false;
   } else {
     brake.style.display = 'inline';
