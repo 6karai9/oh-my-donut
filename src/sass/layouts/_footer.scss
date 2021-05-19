@@ -35,13 +35,10 @@
   transition: var(--animation);
 }
 
-.footer__adress-link:hover
-{
+.footer__adress-link:hover {
   transform: translateY(-6px);
   transition: var(--animation);
 }
-
-
 
 .footer__social-link {
   width: 30px;
@@ -60,7 +57,7 @@
   }
   padding: 5px;
 
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 38px;
     height: 38px;
   }
@@ -79,10 +76,10 @@
   width: 15px;
 }
 .footer__social-icon {
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 18px;
     height: 18px;
-  transition: fill var(--animation);
+    transition: fill var(--animation);
   }
 }
 
@@ -90,13 +87,13 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width:767.98px) {
+  @media screen and (max-width: 767.98px) {
     width: 290px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (min-width:768px) and (max-width: 1198.98px) {
+  @media screen and (min-width: 768px) and (max-width: 1198.98px) {
     width: 634px;
     margin-left: auto;
     margin-right: auto;
@@ -147,36 +144,5 @@
   .footer__social-icon {
     height: 19px;
     max-width: 30px;
-  }
-}
-
-.wheat-four {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.wheat-four__desc,
-.wheat-four__tabl,
-.wheat-four__mob {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .wheat-four__mob {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .wheat-four__tabl {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .wheat-four__desc {
-    display: block;
   }
 }

@@ -356,9 +356,7 @@
   }
 }
 
-.spoon,
-.donuts-m,
-.donuts-l {
+.donuts-m {
   position: absolute;
   z-index: -1;
   display: none;
@@ -369,32 +367,6 @@
   left: 254px;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: block;
-  }
-}
-
-.donuts-l {
-  top: -171px;
-  right: 0px;
-  width: 720px;
-  height: 831px;
-
-  @media screen and (min-width: 1280px) {
-    display: block;
-  }
-}
-
-.donuts-l > img {
-  height: 831px;
-  object-fit: none;
-  object-position: left top;
-}
-
-.spoon {
-  top: 166px;
-  left: -122px;
-
-  @media screen and (min-width: 1280px) {
     display: block;
   }
 }
