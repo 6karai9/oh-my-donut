@@ -32,11 +32,13 @@
 
 .footer__tel-link:hover {
   transform: translateY(-6px);
+  transition: var(--animation);
 }
 
 .footer__adress-link:hover
 {
   transform: translateY(-6px);
+  transition: var(--animation);
 }
 
 
