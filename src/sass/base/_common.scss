@@ -41,14 +41,14 @@ img {
 }
 
 .visually-hidden {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0 !important;
-    border: 0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .no-list {
@@ -63,23 +63,64 @@ body {
   // letter-spacing: 0.03em;
   color: var(--main-text-color);
 
-  @media screen and (min-width: 320px) {
-    background: url('./../images/background_images/top-mobile.svg') no-repeat,
-      url('./../images/background_images/bottom-mobile.svg') no-repeat;
-    background-position: top center, bottom center;
-    background-size: 100vw;
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/footer/wheat-flour-s.png),
+      url('./../images/background_images/top-desktop.svg'),
+      url('./../images/background_images/bottom-desktop.svg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/footer/wheat-flour-s-x2.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/footer/wheat-flour-s-x3.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    background-repeat: no-repeat;
+    background-size: 113px auto, 100vw, 100vw;
+    background-position: left calc(50% + 129px) bottom -35px, top 0px left 0px, bottom 0px left 0px;
   }
-  @media screen and (min-width: 768px) {
-    background: url('./../images/background_images/top-tablet.svg') no-repeat,
-      url('./../images/background_images/bottom-tablet.svg') no-repeat;
-    background-position: top center, bottom center;
-    background-size: 100vw;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background-image: url(../images/footer/wheat-flour-m.png),
+      url('./../images/background_images/top-desktop.svg'),
+      url('./../images/background_images/bottom-desktop.svg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/footer/wheat-flour-m-x2.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/footer/wheat-flour-m-x3.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    background-repeat: no-repeat;
+    background-size: 207px auto, 100vw, 100vw;
+    background-position: left calc(50% + 295px) bottom -38px, top 0px left 0px, bottom 0px left 0px;
   }
+
   @media screen and (min-width: 1280px) {
-    background: url('./../images/background_images/top-desktop.svg') no-repeat,
-      url('./../images/background_images/bottom-desktop.svg') no-repeat;
-    background-position: top center, bottom center;
-    background-size: 100vw;
+    background-image: url(../images/header/spoon-1x.png), url(../images/header/donuts-l-1x.png),
+      url(../images/footer/wheat-flour-l.png), url('./../images/background_images/top-desktop.svg'),
+      url('./../images/background_images/bottom-desktop.svg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/header/spoon-1x.png), url(../images/header/donuts-l-2x.png),
+        url(../images/footer/wheat-flour-l-x2.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/header/spoon-1x.png), url(../images/header/donuts-l-3x.png),
+        url(../images/footer/wheat-flour-l-x3.png),
+        url('./../images/background_images/top-desktop.svg'),
+        url('./../images/background_images/bottom-desktop.svg');
+    }
+    background-repeat: no-repeat;
+    background-size: 264px auto, 795px auto, 362px auto, 100vw, 100vw;
+    background-position: left calc(50% - 630px) top 166px, left calc(50% + 337px) top -171px,
+      left calc(50% + 497px) bottom -134px, top 0px left 0px, bottom 0px left 0px;
   }
 }
 
