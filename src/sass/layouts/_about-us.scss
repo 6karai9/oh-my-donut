@@ -1,18 +1,17 @@
 .aboutus-container {
   display: flex;
 
-  @media screen and (min-width: 1280px) {
-    padding-top: 55px;
-    padding-left: 70px;
+  @media screen and (max-width: 767.98px) {
+    flex-direction: column;
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 80px;
     padding-right: 67px;
   }
-
-  @media screen and (max-width: 767.98px) {
-    flex-direction: column;
+  @media screen and (min-width: 1280px) {
+    padding-top: 50px;
+    padding-left: 70px;
   }
 }
 
