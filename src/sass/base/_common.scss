@@ -67,19 +67,19 @@ body {
     background: url('./../images/background_images/top-mobile.svg') no-repeat,
       url('./../images/background_images/bottom-mobile.svg') no-repeat;
     background-position: top center, bottom center;
-    background-size: 100%;
+    background-size: 100vw;
   }
   @media screen and (min-width: 768px) {
     background: url('./../images/background_images/top-tablet.svg') no-repeat,
       url('./../images/background_images/bottom-tablet.svg') no-repeat;
     background-position: top center, bottom center;
-    background-size: 100%;
+    background-size: 100vw;
   }
   @media screen and (min-width: 1280px) {
     background: url('./../images/background_images/top-desktop.svg') no-repeat,
       url('./../images/background_images/bottom-desktop.svg') no-repeat;
     background-position: top center, bottom center;
-    background-size: 100%;
+    background-size: 100vw;
   }
 }
 
