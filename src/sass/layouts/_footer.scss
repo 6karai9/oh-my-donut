@@ -1,20 +1,21 @@
 .footer {
+  position: relative;
 
   @media screen and (max-width: 767.98px) {
     padding-top: 40px;
     padding-bottom: 5px;
   }
-  
+
   @media screen and (min-width: 768px) {
     padding-top: 45px;
     padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: 1280px) {
     padding-top: 70px;
     padding-bottom: 15px;
   }
-  }
+}
 
 .link {
   text-decoration: none;
@@ -22,10 +23,6 @@
 
 .footer__adress-link,
 .footer__tel-link {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   display: flex;
@@ -33,11 +30,22 @@
   padding: 10px 0px;
 }
 
+.footer__tel-link:hover {
+  transform: translateY(-6px);
+}
+
+.footer__adress-link:hover
+{
+  transform: translateY(-6px);
+}
+
+
+
 .footer__social-link {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 1px solid var(--title-color);
+  border: 1px solid var(--icon-brd-color);
   transition: background-color var(--animation);
   align-items: center;
   text-align: center;
@@ -49,6 +57,11 @@
     fill: var(--white-color);
   }
   padding: 5px;
+
+  @media screen and (min-width:1280px) {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .footer__social-list {
@@ -60,63 +73,46 @@
 }
 
 .footer__contacts-icon {
-  height: 13px;
-  max-width: 15px;
+  height: 15px;
+  width: 15px;
 }
 .footer__social-icon {
-  fill: var(--icons-color);
+  @media screen and (min-width:1280px) {
+    width: 18px;
+    height: 18px;
   transition: fill var(--animation);
-  &:hover,
-  &:focus {
-    fill: var(--white-color);
   }
 }
 
-@media screen and (max-width: 767px) {
-  .footer {
-    background-image: url('./../images/footer/mob/wheat-flour.png');
+.footer__contacts-list {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width:767.98px) {
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .footer__contacts-list {
-    display: flex;
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: space-between;
+  @media screen and (min-width:768px) and (max-width: 1198.98px) {
+    width: 634px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .footer {
-      background-image: var(--gradient-hero), url('./../images/footer/mob/wheat-flour@x2.png');
-    }
+  @media screen and (min-width: 768px) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 214px;
+    padding-right: 214px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer {
-    background-image: url('./../images/footer/tabl/wheat-flour.png');
-  }
 
-  .footer__contacts-list {
-    display: flex;
-    padding-left: 67px;
-    padding-right: 127px;
-    justify-content: space-between;
-  }
-
-  .footer__social-list {
-    margin-bottom: 51px;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .footer {
-      background-image: var(--gradient-hero), url('./../images/footer/tabl/wheat-flour@x2.png');
-    }
-  }
+.footer__social-list {
+  margin-bottom: 51px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -138,33 +134,8 @@
     align-items: center;
   }
 
-  .footer__contacts-list {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 250px;
-    padding-right: 272px;
-  }
-
-  .footer {
-    background-image: url('./../images/footer/desc/wheat-flour.png');
-    background-repeat: no-repeat;
-    // background-size: 318px auto;
-    background-size: 318px 362px;
-
-    background-position: right bottom;
-  }
-
   .footer__social-item:not(:last-child) {
     margin-right: 13px;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .footer {
-      background-image: var(--gradient-hero), url('./../images/footer/desc/wheat-flour@x2.png');
-    }
   }
 
   .footer__social-item {
@@ -174,5 +145,36 @@
   .footer__social-icon {
     height: 19px;
     max-width: 30px;
+  }
+}
+
+.wheat-four {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.wheat-four__desc,
+.wheat-four__tabl,
+.wheat-four__mob {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .wheat-four__mob {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .wheat-four__tabl {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wheat-four__desc {
+    display: block;
   }
 }
