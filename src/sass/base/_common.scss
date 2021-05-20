@@ -118,10 +118,14 @@ body {
         url('./../images/background_images/bottom-desktop.svg');
     }
     background-repeat: no-repeat;
-    background-size: 264px auto, 795px auto, 362px auto, 100vw, 100vw;
+    background-size: 264px auto, 795px auto, 362px auto, 100% 1035px, auto 1460px;
     background-position: left calc(50% - 630px) top 166px, left calc(50% + 337px) top -171px,
-      left calc(50% + 497px) bottom -134px, top 0px left 0px, bottom 0px left 0px;
+      left calc(50% + 497px) bottom -134px, top, bottom ;
+    background-color: var(--form-bg-color);
+    
   }
+
+  
 }
 
 .title {
