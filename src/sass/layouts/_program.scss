@@ -127,13 +127,23 @@
     margin-bottom: 0px;
   }
 }
-#program__more {
+
+#section-program {
+  @media screen and (max-width: 1198.98px) {
+    max-width: 298px;
+  max-height: auto;
+  word-wrap: break-word;
+  }
+}
+
+.program-moretext {
   display: none;
 
   @media screen and (min-width: 1280px) {
     display: block;
   }
 }
+
 @media screen and (max-width: 1279.98px) {
   .program__paragraph_1 {
     font-size: 16px;
