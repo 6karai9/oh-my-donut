@@ -204,6 +204,7 @@
     display:none;
     font-size:11px;
     transition: background-color, scale var(--animation);
+    z-index: 999;
 
     &:hover{
         cursor:pointer;
