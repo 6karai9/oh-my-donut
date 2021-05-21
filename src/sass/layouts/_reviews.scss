@@ -189,6 +189,28 @@
 }
 
 
+.toTop{
+    width:100px;
+    border:none;
+    border-radius: 20px;
+    color:var(--white-color);
+    font-weight: 700;
+    background:var(--bg-button-color);
+    text-align:center;
+    padding:7px;
+    position:fixed;
+    bottom:20px;
+    right:10px;
+    display:none;
+    font-size:11px;
+    transition: background-color, scale var(--animation);
 
+    &:hover{
+        cursor:pointer;
+        transform: scale(1.1);
+        background: var(--main-hover);
+        box-shadow: 0 2px 2px var(--logo-color);
+    }
+}
 
 
