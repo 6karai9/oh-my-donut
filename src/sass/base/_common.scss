@@ -79,7 +79,8 @@ body {
     }
     background-repeat: no-repeat;
     background-size: 113px auto, 100vw, 100vw;
-    background-position: left calc(50% + 129px) bottom -35px, top 0px left 0px, bottom 0px left 0px;
+    background-position: left calc(50% + 129px) bottom -35px, top 0px left 0px,
+      bottom 216px left 0px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -98,7 +99,7 @@ body {
     }
     background-repeat: no-repeat;
     background-size: 207px auto, 100vw, 100vw;
-    background-position: left calc(50% + 295px) bottom -38px, top 0px left 0px, bottom 0px left 0px;
+    background-position: left calc(50% + 295px) bottom -38px, top 0px left 0px, bottom 63px left 0px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -120,12 +121,9 @@ body {
     background-repeat: no-repeat;
     background-size: 264px auto, 795px auto, 362px auto, 100% 1035px, auto 1460px;
     background-position: left calc(50% - 630px) top 166px, left calc(50% + 337px) top -171px,
-      left calc(50% + 497px) bottom -134px, top, bottom ;
+      left calc(50% + 497px) bottom -134px, top, bottom;
     background-color: var(--form-bg-color);
-    
   }
-
-  
 }
 
 .title {
