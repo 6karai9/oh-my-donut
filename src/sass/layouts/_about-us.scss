@@ -15,20 +15,20 @@
   }
 }
 
-#state {
-  display: none;
-
-  @media screen and (min-width: 1280px) {
-    display: block;
+#section {
+  @media screen and (max-width: 1198.98px) {
+    max-width: 298px;
+  max-height: auto;
+  word-wrap: break-word;
   }
 }
 
-#more {
+.moretext {
   display: none;
 
   @media screen and (min-width: 1280px) {
-    display: block;
-  }
+        display: block;
+      }
 }
 
 .cupcake-pos {
