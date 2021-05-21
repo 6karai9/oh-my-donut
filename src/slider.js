@@ -47,7 +47,7 @@ if ($slider.length) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 300)}); 
+      $('body,html').animate({scrollTop: top}, 200)}); 
 
 
       $(window).scroll(function() {
@@ -66,7 +66,7 @@ if ($slider.length) {
          
         $('.toTop').click(function() {
          
-        $('body,html').animate({scrollTop:0},400)});
+        $('body,html').animate({scrollTop:0},200)});
         
 });
 

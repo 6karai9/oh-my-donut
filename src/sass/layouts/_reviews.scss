@@ -199,11 +199,12 @@
     text-align:center;
     padding:7px;
     position:fixed;
-    bottom:20px;
+    bottom:40px;
     right:10px;
     display:none;
     font-size:11px;
     transition: background-color, scale var(--animation);
+    z-index: 999;
 
     &:hover{
         cursor:pointer;
